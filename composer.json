@@ -1,4 +1,7 @@
 {
     "name": "zonuexe/katatema-vue",
-    "license": "MIT"
+    "license": "MIT",
+    "autoload": {
+        "classmap": ["./src"]
+    }
 }
