@@ -26,7 +26,7 @@ $json = json_encode([
 <title>アイテム管理画面</title>
 <style>[v-cloak] { display: none; }</style>
 <script src="//cdnjs.cloudflare.com/ajax/libs/vue/2.1.5/vue.js"></script>
-<script id="json-vue" data-json="<?= htmlspecialchars($json) ?>"></script>
+<script id="json-vue" data-json="<?= h($json) ?>"></script>
 
 <section id="app">
     <form method="post">

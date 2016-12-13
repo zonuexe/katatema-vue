@@ -28,13 +28,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </tr>
         <?php foreach ($items as $n => $item): ?>
             <tr>
-                <td><input name="items[<?= htmlspecialchars($n) ?>][name]" value="<?= htmlspecialchars($item->name) ?>"></td>
-                <td><input name="items[<?= htmlspecialchars($n) ?>][desc]" value="<?= htmlspecialchars($item->desc) ?>"></td>
+                <td><input name="items[<?= h($n) ?>][name]" value="<?= h($item->name) ?>"></td>
+                <td><input name="items[<?= h($n) ?>][desc]" value="<?= h($item->desc) ?>"></td>
             </tr>
         <?php endforeach; ?>
         <tr>
-            <td><input name="items[<?= htmlspecialchars($n + 1) ?>][name]" value=""></td>
-            <td><input name="items[<?= htmlspecialchars($n + 1) ?>][desc]" value=""></td>
+            <td><input name="items[<?= h($n + 1) ?>][name]" value=""></td>
+            <td><input name="items[<?= h($n + 1) ?>][desc]" value=""></td>
         </tr>
     </table>
     <button type="submit">保存</button>
